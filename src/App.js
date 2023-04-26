@@ -181,8 +181,8 @@ const App = () => {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/login" element={<Login />} />
         </Routes>
-        <Footer />
       </div>
+      <Footer />
     </BrowserRouter>
   )
 }

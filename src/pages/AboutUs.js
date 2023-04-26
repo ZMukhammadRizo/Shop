@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import bg from "../img/bg.jpeg"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
+import L from "leaflet"
 
 // ------------------------
 import "leaflet/dist/leaflet.css"
@@ -72,7 +73,13 @@ const AboutUs = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[41.271833, 69.23197]}>
+        <Marker
+          position={[41.271833, 69.23197]}
+          icon={L.icon({
+            iconUrl: require("../img/icon.png"),
+            iconSize: 20,
+          })}
+        >
           <Popup>Здесь мы расположены :)</Popup>
         </Marker>
       </Map>
